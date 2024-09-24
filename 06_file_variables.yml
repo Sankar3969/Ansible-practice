@@ -1,6 +1,6 @@
 - name: File level variables
   hosts: web
-  vars-files:
+  vars_files:
     - vars.yml
   tasks:
     - name: file varible task
