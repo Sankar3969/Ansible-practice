@@ -1,0 +1,10 @@
+- name: Nginx installation
+  hosts: web
+  become: yes
+  tasks:
+  - name: Nginx installation task
+    ansible.builtin.debug:
+      msg: "Starting the Nginx installation for ansible node "
+    ansible.builtin.package:
+    name: nginx
+    state: present
