@@ -1,0 +1,8 @@
+- name: File level variables
+  hosts: web
+  vars-files:
+    - vars.yml
+  tasks:
+    - name: file varible task
+      ansible.builtin.debug:
+        msg: "the course is {{course}}"
