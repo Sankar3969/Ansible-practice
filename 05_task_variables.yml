@@ -8,7 +8,7 @@
       msg: " the course is {{course}}"
 
 - name: this is the Task1 level
-  host: web
+  hosts: web
   vars:
     course: "devops aws task level"
   tasks:
@@ -17,7 +17,7 @@
       msg: "The course is: {{course}}"
 
 - name: this is the Task2 level
-  host: web
+  hosts: web
   tasks:
   - name: Task level varible 
     ansible.builtin.debug:
