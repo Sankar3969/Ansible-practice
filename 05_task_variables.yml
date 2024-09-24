@@ -7,6 +7,15 @@
     ansible.builtin.debug:
       msg: " the course is {{course}}"
 
+  - name: play 1 and task 2
+    vars:
+      course: "The java with task 2"
+    ansible.builtin.debug:
+       msg: " The course is :{{course}}"    
+  - name: play 2 and task 3
+    ansible.builtin.debug:
+       msg: " The course is :{{course}}"  
+
 - name: this is the Task1 level
   hosts: web
   vars:
@@ -16,9 +25,3 @@
     ansible.builtin.debug:
       msg: "The course is: {{course}}"
 
-- name: this is the Task2 level
-  hosts: web
-  tasks:
-  - name: Task level varible 
-    ansible.builtin.debug:
-      msg: "The course is: {{course}}"
