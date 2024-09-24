@@ -5,6 +5,5 @@
     ansible.builtin.debug:
       msg: "This is from PLAY 01 and TASK 1"
   - name: Play 02 and TASK 2
-    ansible.bultin.debug:
+    ansible.builtin.debug:
       msg: "This is from PLAY 02 and TASK 2"
-      
