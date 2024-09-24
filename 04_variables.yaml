@@ -7,4 +7,5 @@
   tasks:
   - name : varibles with play level
     ansible.builtin.debug:
-      msg: "This is the course is  {{course}}, faculty: {{trainer}} and duration {{duration}} "
+      msg: "This is the course {{course}}, faculty: {{trainer}} and duration is {{duration}} "
+      

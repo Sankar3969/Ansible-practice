@@ -1,0 +1,22 @@
+- name: Task level variables
+  hosts: web
+  vars:
+    course: "devops aws play level"
+  tasks:
+  - name: Play1 task 1
+    ansible.builtin.debug:
+      msg: " the course is {{course}}"
+
+- name: this is the Task1 level
+  vars:
+    course: "devops aws task level"
+  tasks:
+  - name: Task level varible 
+    ansible.builtin.debug:
+      msg: "The course is: {{course}}"
+
+- name: this is the Task2 level
+  tasks:
+  - name: Task level varible 
+    ansible.builtin.debug:
+      msg: "The course is: {{course}}"
