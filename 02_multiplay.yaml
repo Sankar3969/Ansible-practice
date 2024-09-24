@@ -1,0 +1,10 @@
+- name: Playbook 1 and Play1
+  hosts: web
+  tasks:
+  - name: PLAY01 and Task 1
+    ansible.builtin.debug:
+      msg: "This is from PLAY 01 and TASK 1"
+  - name: Play 02 and TASK 2
+    ansible.bultin.debug:
+      msg: "This is from PLAY 02 and TASK 2"
+      
