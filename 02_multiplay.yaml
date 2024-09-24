@@ -7,3 +7,13 @@
   - name: Play 02 and TASK 2
     ansible.builtin.debug:
       msg: "This is from PLAY 02 and TASK 2"
+
+- name: Play 02
+  hosts: web
+  tasks:
+    - name: Play2 TASK1
+      ansible.builtin.debug:
+        msg: "this is from play 2 task 1 "
+    - name: Play2 Task 2
+      ansible.builtin.debug:
+        msg: "This is from play2 task2" 
