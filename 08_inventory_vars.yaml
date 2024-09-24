@@ -4,3 +4,8 @@
    - name: inventory variables
      ansible.builtin.debug:
       msg: "The course details from inventory file : {{course}}"
+
+   - name: varible from arguments
+     ansible.builtin.debug:
+      msg: "The course details from cmd args {{duration} :: {{trainer}}}"
+      
