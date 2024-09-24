@@ -7,5 +7,5 @@
 
    - name: varible from arguments
      ansible.builtin.debug:
-      msg: "The course details from cmd args {{duration} :: {{trainer}}"
+      msg: "The course details from cmd args {{duration}} :: {{trainer}}"
       
