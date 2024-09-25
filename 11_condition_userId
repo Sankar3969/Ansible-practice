@@ -7,16 +7,16 @@
      register: userid
      ignore_errors: True
 
-   - name: adding the user
+   - name: the user exists or not
      ansible.builtin.debug: 
       msg: "user expense does not exists"
      when: userid.rc != 0  
 
    - name: adding the userrrr
      ansible.builtin.debug: 
-      msg: "user expense Already  exists"
-     when: userid.rc == 0  
+      msg: "user expense Already  exists {{userid}}"
+     when: userid.rc != 1  
 
-   - name: adding the user
+   - name: adding the new user
      ansible.builtin.command: useradd expense
      when: userid.rc != 0
