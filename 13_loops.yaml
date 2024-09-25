@@ -1,5 +1,6 @@
 - name: loops practice
   hosts: web
+  become: yes
   tasks:
   - name: This is the loop practice 
     ansible.builtin.debug:
