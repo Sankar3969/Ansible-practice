@@ -5,10 +5,10 @@
    course: "devops"
    duration: 150
    topics:
-     -shell
-     -ansible
-     -terraform
-     -docker
+     shell
+     ansible
+     terraform
+     docker
    tools:
     jp: jenkins
     dc: docker
