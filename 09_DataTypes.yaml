@@ -1,0 +1,27 @@
+- name: Data Types
+  hosts: local
+  connection: local
+  vars:
+   course: "devops"
+   duration: 150
+   topics:
+    -shell
+    -ansible
+    -terraform
+    -docker
+   tools:
+    jp: jenkins
+    dc: docker
+    k8: kubernates
+    aws:
+      -ec2
+      -iam
+      -R53
+     
+  tasks:
+   - name: Print the datatypes
+     ansible.builtin.debug:
+      msg: "The data types are string:{{course}}
+            Number {{duration}} 
+            list :: {{topics}}
+            map:: {{tools}}" 
