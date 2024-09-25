@@ -14,7 +14,7 @@
   - name: Split String
     vars:
       string2: " I am learing Ansible"
-    set_facts:
+    set_fact:
       my_string: "{{string2 | split(' ')}}"
     debug:
       msg: " The String in Upper case::  {{string1 | trim | split(' ') }}"
@@ -22,10 +22,8 @@
   - name: Assign the Split String
     vars:
       string2: " I am learing Ansible"
-    set_fact:
-      my_string: "{{string2 | split(' ')}}"
     debug:
-      msg: " The String in Upper case::  {{string1 | trim | split(' ') }}"
+      msg: " The String in Upper case::  {{my_string}}"
 
 
 
