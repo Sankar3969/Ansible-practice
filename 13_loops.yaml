@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: This is the loop practice 
-    ansible.builtin.debug:
+    debug:
       msg: "  the  List names: {{item}} "
     loop:
       - sankar
