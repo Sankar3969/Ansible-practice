@@ -1,7 +1,7 @@
 - name: String ManiPulation
   hosts: web
   vars:
-    string1:" I am learing Ansible"
+    string1: " I am learing Ansible"
   tasks:
     debug:
       msg: " The String in Upper case::  {{string1 | Upper }}"
