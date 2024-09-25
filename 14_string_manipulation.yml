@@ -20,7 +20,7 @@
 
   - name: Assign the Split String
     debug:
-      msg: " The String in Upper case:: {{my_string}} "
+      msg: " The String in Upper case:: {{my_string[0]}} "
 
 
 
