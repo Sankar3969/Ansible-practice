@@ -12,8 +12,10 @@
       msg: " The String in Upper case::  {{string1 | lower }}"
     
   - name: Split String
+    vars:
+      string2: " I am learing Ansible"
     debug:
-      msg: " The String in Upper case::  {{string1 | split(' ') }}"
+      msg: " The String in Upper case::  {{string1 | trim | split(' ') }}"
 
 
       
