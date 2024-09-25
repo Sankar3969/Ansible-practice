@@ -4,7 +4,7 @@
   vars:
    course: "devops"
    duration: 150
-   - topics:
+   topics:
      shell
      ansible
      terraform
@@ -13,7 +13,7 @@
     jp: jenkins
     dc: docker
     k8: kubernates
-    - aws:
+     aws:
       ec2
       iam
       R53
