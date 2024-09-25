@@ -2,17 +2,17 @@
   hosts: web
   become: yes
   tasks:
-   - name: UserID exsitense
+   - name: userid exsitense in server
      ansible.builtin.command: id user
      register: userid
-     ignore_error: True
+     ignore_errors: True
 
    - name: adding the user
      ansible.builtin.debug: 
       msg: "user expense does not exists"
      when: ansible_rc != 0  
 
-   - name: adding the user
+   - name: adding the userrrr
      ansible.builtin.debug: 
       msg: "user expense Already  exists"
      when: ansible_rc == 0  
