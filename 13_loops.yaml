@@ -1,0 +1,11 @@
+- name: loops practice
+  hosts: web
+  tasks:
+  - name: This is the loop practice 
+    ansible.builtin.debug:
+      msg: "  the  List names: {{item}} "
+    loop:
+     -sankar
+     -ram
+     -robert
+     -rahim
