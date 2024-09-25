@@ -1,5 +1,6 @@
 - name: checking the general facts
   hosts: web
+  become: yes
   tasks:
     - name: the general facts data
       ansible.builtin.debug:
