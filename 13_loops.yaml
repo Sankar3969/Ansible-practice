@@ -15,3 +15,11 @@
       msg: "This is list of key {{item.id, item.val}}"   
     loop:
       - {id: 01, val: "java"}
+
+  - name: This is the loops with software installation
+    ansible.builtin.package:
+      name: {{item.name}}
+      state: {{item.state}}
+    loop:
+      - {name: 'mysql' state: 'present'}
+      - {name: 'nginx' state: 'absent'}
