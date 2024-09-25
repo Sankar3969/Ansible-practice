@@ -15,7 +15,7 @@
     vars:
       string3: " I am Ansible"
     set_fact:
-      my_string: "{{string3 | split ('') }}"
+      my_string: "{{string3 | split (' ') }}"
     
 
   - name: Assign the Split String
