@@ -14,4 +14,4 @@
     ansible.builtin.debug:
       msg: "This is list of key {{item.id , item.val}}"   
     loop:
-      {'id': '01', 'val':'java'}
+      {id: 01, val: "java"}
