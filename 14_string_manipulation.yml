@@ -4,8 +4,6 @@
     string1: " I am learing Ansible"
   tasks:
   - name: Upper case
-    vars:
-      string3: "Ansible"
     debug:
       msg: " The String in Upper case::  {{string1 | upper }}"
 
@@ -14,6 +12,8 @@
       msg: " The String in Upper case::  {{string1 | lower }}, {{string1 | capitalize}}"
     
   - name: Split String
+    vars:
+      string3: "Ansible"
     set_fact:
       my_string: "{{string3 | lower}}"
     
