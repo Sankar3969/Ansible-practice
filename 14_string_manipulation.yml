@@ -9,13 +9,24 @@
 
   - name: Lower case
     debug:
-      msg: " The String in Upper case::  {{string1 | lower }}"
+      msg: " The String in Upper case::  {{string1 | lower }}, {{string1 | capitalize}}"
     
   - name: Split String
     vars:
       string2: " I am learing Ansible"
+    set_facts:
+      my_string: "{{string2 | split(' ')}}"
     debug:
       msg: " The String in Upper case::  {{string1 | trim | split(' ') }}"
+
+  - name: Assign the Split String
+    vars:
+      string2: " I am learing Ansible"
+    set_facts:
+      my_string: "{{string2 | split(' ')}}"
+    debug:
+      msg: " The String in Upper case::  {{string1 | trim | split(' ') }}"
+
 
 
       
