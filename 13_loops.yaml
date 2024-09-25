@@ -12,6 +12,6 @@
 
   - name: This is loops with map type 
     ansible.builtin.debug:
-      msg: "This is list of key {{item.id , item.val}}"   
+      msg: "This is list of key {{item.id }}"   
     loop:
       {id: 01, val: "java"}
