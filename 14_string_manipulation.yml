@@ -6,3 +6,4 @@
   - name: String manipulaton
     debug:
       msg: " The String in Upper case::  {{string1 | upper }}"
+      msg: " The String in Lower case::  {{string1 | lower }}"
