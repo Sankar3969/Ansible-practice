@@ -3,4 +3,4 @@
   tasks:
     - name: the general facts data
       ansible.builtin.debug:
-        msg: "{{ ansible_os_families }}"
+        msg: "{{ ansible_facts['os_family'] }}"
