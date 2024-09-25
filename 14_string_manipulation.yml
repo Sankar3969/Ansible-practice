@@ -3,5 +3,6 @@
   vars:
     string1: " I am learing Ansible"
   tasks:
+  - name: String manipulaton
     debug:
       msg: " The String in Upper case::  {{string1 | Upper }}"
