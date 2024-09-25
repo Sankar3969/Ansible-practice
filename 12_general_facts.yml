@@ -1,0 +1,6 @@
+- name: checking the general facts
+  hosts: web
+  tasks:
+    - name: the general facts data
+      ansible.builtin.debug:
+        msg: {{ ansible_facts }}
