@@ -9,10 +9,10 @@
       ansible.builtin.dnf:
         name: nginx
         state: present
-      when: ansible_os_famil == "RedHat"
+      when: ansible_os_family == "RedHat"
 
     - name: The ansible facts and os familiy with redhat
       ansible.builtin.apt:
         name: nginx
         state: present
-      when: ansible_os_famil == "Debian" 
+      when: ansible_os_family == "Debian" 
