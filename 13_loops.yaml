@@ -5,7 +5,7 @@
     ansible.builtin.debug:
       msg: "  the  List names: {{item}} "
     loop:
-     sankar
-     ram
-     robert
-     rahim
+    -sankar
+    -ram
+    -robert
+    -rahim
