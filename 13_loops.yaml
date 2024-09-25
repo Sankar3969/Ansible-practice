@@ -4,7 +4,7 @@
   tasks:
   - name: This is the loop practice 
     debug:
-      msg: "  the  List names: {{item}} "
+      msg: "  the  List names are in package is: {{item}} "
     loop:
       - sankar
       - ram
@@ -12,13 +12,13 @@
       - rahim
 
   - name: This is loops with map type 
-    ansible.builtin.debug:
+    debug:
       msg: "This is list of key {{item.id, item.val}}"   
     loop:
       - {id: 01, val: "java"}
 
   - name: This is the loops with software installation
-    ansible.builtin.package:
+    package:
       name: "{{item.name}}"
       state: "{{item.state}}"
     loop:
