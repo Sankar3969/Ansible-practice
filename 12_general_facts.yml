@@ -4,3 +4,15 @@
     - name: the general facts data
       ansible.builtin.debug:
         msg: "{{ ansible_facts['os_family'] }}"
+      
+    - name: The ansible facts and os familiy with redhat
+      ansible.builtin.dnf:
+       -name: nginx
+        state: present
+      when: ansible_os_famil == "RedHat"
+
+    - name: The ansible facts and os familiy with redhat
+      ansible.builtin.apt:
+       -name: nginx
+        state: present
+      when: ansible_os_famil == "Debian" 
