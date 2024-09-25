@@ -9,9 +9,9 @@
     - name: The conditions checking
       ansible.builtin.debug:
         msg: "The number {{my_number}} is  greter than 100"
-      when: my_number > 100
+      when: my_number | int > 100
 
     - name: the less than condition check
       ansible.builtin.debug:
         msg: "The number {{my_number}} is  less than 100"
-      when: my_number <= 100    
+      when: my_number | int <= 100    
