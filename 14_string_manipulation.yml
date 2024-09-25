@@ -3,7 +3,17 @@
   vars:
     string1: " I am learing Ansible"
   tasks:
-  - name: String manipulaton
+  - name: Upper case
     debug:
       msg: " The String in Upper case::  {{string1 | upper }}"
-      msg: " The String in Lower case::  {{string1 | lower }}"
+
+  - name: Lower case
+    debug:
+      msg: " The String in Upper case::  {{string1 | lower }}"
+    
+  - name: Split String
+    debug:
+      msg: " The String in Upper case::  {{string1 | split(' ') }}"
+
+
+      
