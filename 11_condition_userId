@@ -10,13 +10,13 @@
    - name: adding the user
      ansible.builtin.debug: 
       msg: "user expense does not exists"
-     when: ansible_rc != 0  
+     when: userid.rc != 0  
 
    - name: adding the userrrr
      ansible.builtin.debug: 
       msg: "user expense Already  exists"
-     when: ansible_rc == 0  
+     when: userid.rc == 0  
 
    - name: adding the user
      ansible.builtin.command: useradd expense
-     when: ansible_rc != 0
+     when: userid.rc != 0
