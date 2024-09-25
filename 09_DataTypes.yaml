@@ -5,18 +5,18 @@
    course: "devops"
    duration: 150
    topics:
-     shell
-     ansible
-     terraform
-     docker
+     -shell
+     -ansible
+     -terraform
+     -docker
    tools:
     jp: jenkins
     dc: docker
     k8: kubernates
     aws:
-      ec2
-      iam
-      R53
+      -ec2
+      -iam
+      -R53
      
   tasks:
    - name: Print the datatypes
