@@ -20,9 +20,8 @@
 
   - name: Assign the Split String
     vars:
-      string4: " I am learing Ansible"
     debug:
-      msg: " The String in Upper case::  "
+      msg: " The String in Upper case:: {{my_string}} "
 
 
 
