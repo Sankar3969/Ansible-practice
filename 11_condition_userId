@@ -1,0 +1,22 @@
+- name: User id checking
+  hosts: web
+  become: yes
+  tasks:
+   - name: UserID exsitense
+     ansible.builtin.command: id user
+     register: userid
+     ignore_error: True
+
+   - name: adding the user
+     ansible.builtin.debug: 
+      msg: "user expense does not exists"
+     when: ansible_rc != 0  
+
+   - name: adding the user
+     ansible.builtin.debug: 
+      msg: "user expense Already  exists"
+     when: ansible_rc == 0  
+
+   - name: adding the user
+     ansible.builtin.command: useradd expense
+     when: ansible_rc != 0
