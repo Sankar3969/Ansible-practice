@@ -9,7 +9,7 @@
 
    - name: the user exists or not
      ansible.builtin.debug: 
-      msg: "user expense does not exists"
+      msg: "user expense does not exists {{userid.rc}}"
      when: userid.rc != 0  
 
    - name: adding the userrrr
