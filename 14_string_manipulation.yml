@@ -22,7 +22,7 @@
     vars:
       string4: " I am learing Ansible"
     debug:
-      msg: " The String in Upper case::  {{my_string[0]}}"
+      msg: " The String in Upper case::  "
 
 
 
