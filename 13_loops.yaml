@@ -4,7 +4,7 @@
   tasks:
   - name: This is the loop practice 
     debug:
-      msg: "  the  List names are in package is: {{item}} "
+      msg: "  the  List names are in debug is: {{item}} "
     loop:
       - sankar
       - ram
