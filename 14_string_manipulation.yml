@@ -19,7 +19,6 @@
     
 
   - name: Assign the Split String
-    vars:
     debug:
       msg: " The String in Upper case:: {{my_string}} "
 
