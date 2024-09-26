@@ -24,7 +24,7 @@
 
   - name: item assignment
     set_fact:
-     ans-variable: "{{item}}"
+     ans_variable: "{{item}}"
     when: item =='Ansible'
     loop: "{{ my_string }}"
 
