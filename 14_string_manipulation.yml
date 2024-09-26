@@ -24,13 +24,13 @@
 
   - name: item assignment
     set_fact:
-     ans_variable: "{{item}}"
+      variable1: "{{item}}"
     when: item =='Ansible'
     loop: "{{ my_string }}"
 
   - name: The item assignment
     debug:
-      msg: " The String in Upper case:: {{ans-variable}} , {{ my_string }} "
+      msg: " The String in Upper case:: {{variable1}} , {{ my_string }} "
     
 
 
