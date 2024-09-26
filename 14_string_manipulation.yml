@@ -41,13 +41,12 @@
   - name:  the defuat values for list
     vars: 
       courses:
-       - java
-       - devops
-       - python
-       - aws
+       name: "java"
+       name: "devops"
+       name: "python"
     debug:
-      msg: "{{item.courses}}" 
-    
+      msg: "{{item.name}}, {{item.status | default ('not specified')}}"
+    loop: {{courses}}    
 
 
       
