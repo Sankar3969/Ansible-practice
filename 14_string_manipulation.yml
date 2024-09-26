@@ -37,6 +37,16 @@
       variable2: "{{corse | default('admin')}}"
     debug:
       msg: "The variable 2 is: {{variable2}} , the variable 3 is {{course | default('admin')}} "
+  
+  - name:  the defuat values for list
+    vars: 
+       course:
+         - java
+         - devops
+         - python
+         - aws
+    debug:
+      msg: "{{item.course}},  and has ::{{item.status | default ('AI')}}" 
     
 
 
