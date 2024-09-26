@@ -20,7 +20,7 @@
   - name: mystring validation
     set_fact:
      my_string: "{{my_string +['automation']}}"
-    loop: "{{ my_string }}"
+    when: "'Ansible' in my_string "
 
   - name: item assignment
     set_fact:
