@@ -34,7 +34,7 @@
 
   - name: deafault varible assignment
     vars:
-      variable2: "{{corse | defalt('admin')}}"
+      variable2: "{{corse | default('admin')}}"
     debug:
       msg: "The variable 2 is: {{variable2}} "
     
