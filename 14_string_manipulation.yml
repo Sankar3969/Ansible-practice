@@ -48,5 +48,12 @@
       msg: "{{item}}"
     loop: "{{courses | dict2items}}"    
 
+  - name:  the number minimum, maximum and unique and distinct
+    vars: 
+      numbers: [1,4,45,3,1,2,3]
+    debug:
+      msg: "Min :: {{numbers | min }} max:: {{numbers | max }} uniquie :: {{numbers | unique }}"
+    
+
 
       
