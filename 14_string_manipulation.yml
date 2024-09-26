@@ -15,13 +15,14 @@
     vars:
       string3: " I am Ansible"
     set_fact:
-      my_string: "{{string3 | split (' ') }}"
+      my_string: "{{string3 | trim | split (' ') }}"
     
 
   - name: Assign the Split String
     debug:
-      msg: " The String in Upper case:: {{my_string[2]}} "
-
+      msg: " The String in Upper case:: {{item}} "
+    loop:
+      - {my_string}
 
 
       
