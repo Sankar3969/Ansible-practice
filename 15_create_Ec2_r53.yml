@@ -2,21 +2,21 @@
   hosts: local
   connection: local
   vars:
-    subnet_id: 
-    sg-id: 
-    ami_id: 
+    subnet_id: subnet-053e9fc2e2cae9a0a
+    sg-id: "sg-041ee0572bd9bc6ca"
+    ami_id: "ami-09c813fb71547fc4f"
     zone: "sankardevops.shop"
-  instances: 
-    - mysql
-    - backend
-    - frontend
+    instances: 
+      - mysql
+      - backend
+      - frontend
   tasks:
     amazon.aws.ec2_instance:
-    name: private instances creation
-    vpc_subnet_id: "{{subnet_id}}"
-    instance_type: "t3.micro"
-    security_group: "{{sg-id}}"
-    image_id: ami-123456
+      name: "{{item}}"
+      vpc_subnet_id: "{{subnet_id}}"
+      instance_type: "t3.micro"
+      security_group: "{{sg-id}}"
+      image_id: ami-123456
   loop: "{{instances}}"
   register: ec2_instances
 
