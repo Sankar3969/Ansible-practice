@@ -11,6 +11,7 @@
       - backend
       - frontend
   tasks:
+  - name: The private instances creation
     amazon.aws.ec2_instance:
       name: "{{item}}"
       vpc_subnet_id: "{{subnet_id}}"
