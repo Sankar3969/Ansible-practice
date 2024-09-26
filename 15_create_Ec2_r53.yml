@@ -26,7 +26,7 @@
       msg: "The reslts are {{ec2_instances}}"   
 
   - name: The route 53
-     amazon.aws.route53:
+    amazon.aws.route53:
        state: present
        zone: "{{zone}}"
        record: "{{item.item}}.{{zone}}"
@@ -34,5 +34,5 @@
        ttl: 1
        value: "{{item.instances[0].private_ip_address}}"
        wait: true
-     loop: "{{instances}}"
-     overwrite: True
+    loop: "{{instances}}"
+    overwrite: True
