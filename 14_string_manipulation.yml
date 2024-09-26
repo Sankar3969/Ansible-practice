@@ -19,10 +19,9 @@
 
   - name: mystring validation
     debug:
-      msg: " The  custome case:: {{item}} , {{item | replace('Ansible','automation')}} "
-    loop:
-      - "{{my_string}}"
-    when: item =="Ansible"
+      msg: " The  custome case:: {{item}} , {{item | replace('Ansible','automation' | if item == 'Ansible' else item)}} "
+    loop: "{{my_string}}"
+
 
 
       
