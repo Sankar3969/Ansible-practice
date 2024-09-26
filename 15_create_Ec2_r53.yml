@@ -37,8 +37,8 @@
        overwrite: True
     loop: "{{ec2_instances.results}}"
 
-    - name: The route 53
-      amazon.aws.route53:
+  - name: The route public record
+    amazon.aws.route53:
        state: present
        zone: "{{zone}}"
        record: "{{zone}}"
@@ -47,6 +47,6 @@
        value: "{{item.instances[0].public_ip_address}}"
        wait: true
        overwrite: True
-      loop: "{{ec2_instances.results}}"
-      when: "{{item:item == 'frontend'}}"
+    loop: "{{ec2_instances.results}}"
+    when: item:item == frontend
     
