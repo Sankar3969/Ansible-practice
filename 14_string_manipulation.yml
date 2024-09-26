@@ -41,9 +41,9 @@
   - name:  the defuat values for list
     vars: 
       courses:
-         A: "java"
-         B: "devops"
-         C: "python"
+         A: java
+         B: devops
+         C: python
     debug:
       msg: "{{item)}}"
     loop: "{{courses | dict2items}}"    
