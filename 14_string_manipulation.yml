@@ -16,12 +16,12 @@
       string3: " I am Ansible"
     set_fact:
       my_string: "{{string3 | trim | split (' ') }}"
-    
 
-  - name: my_string
+  - name: mystring validation
     debug:
-      msg: " The String in custome case:: {{my_string}} "
-    
+      msg: " The String in custome case:: {{item}} "
+    loop:
+      {{my_string}}
 
 
       
