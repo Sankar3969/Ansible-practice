@@ -19,7 +19,7 @@
 
   - name: mystring validation
     debug:
-      msg: " The  custome case::  {{(item | replace('Ansible','automation')) | if item == 'Ansible' else item)}} "
+      msg: " The  custome case::  {{(item | replace('Ansible','automation')) | if item == 'Ansible' else item}} "
     loop: "{{my_string}}"
 
 
