@@ -22,5 +22,5 @@
     register: ec2_instances
 
   - name: The ec2- instance creation results
-      debug:
+      ansible.builtin.debug: 
         msg: " The Results are::  {{ec2_instances}}"
