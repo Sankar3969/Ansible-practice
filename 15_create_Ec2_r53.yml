@@ -48,5 +48,5 @@
        wait: true
        overwrite: True
     loop: "{{ec2_instances.results}}"
-    when: {{item:item == 'frontend'}}
+    when: "{{item:item == 'frontend'}}"
     
