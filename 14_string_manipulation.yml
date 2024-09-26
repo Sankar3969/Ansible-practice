@@ -41,9 +41,9 @@
   - name:  the defuat values for list
     vars: 
       courses:
-       name: "java"
-       name: "devops"
-       name: "python"
+       - name: "java"
+       - name: "devops"
+       - name: "python"
     debug:
       msg: "{{item.name}}, {{item.status | default ('not specified')}}"
     loop: "{{courses}}"    
