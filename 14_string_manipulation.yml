@@ -21,7 +21,7 @@
     debug:
       msg: " The String in custome case:: {{item}} "
     loop:
-      - {{my_string}}
+      - "{{my_string}}"
 
 
       
