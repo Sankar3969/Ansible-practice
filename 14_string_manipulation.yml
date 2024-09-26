@@ -33,7 +33,7 @@
       msg: " The String in Upper case:: {{variable1}} , {{ my_string }} "
 
   - name: deafault varible assignment
-    set_fact:
+    vars:
       variable2: defalt('admin')
     loop: "{{ variable2 }}"
     
