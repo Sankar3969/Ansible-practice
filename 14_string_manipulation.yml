@@ -36,7 +36,7 @@
     vars:
       variable2: "{{corse | default('admin')}}"
     debug:
-      msg: "The variable 2 is: {{variable2}} , the variable 3 is {{course | default('admin')} "
+      msg: "The variable 2 is: {{variable2}} , the variable 3 is {{course | default('admin')}} "
     
 
 
