@@ -46,7 +46,7 @@
        name: "python"
     debug:
       msg: "{{item.name}}, {{item.status | default ('not specified')}}"
-    loop: {{courses}}    
+    loop: "{{courses}}"    
 
 
       
