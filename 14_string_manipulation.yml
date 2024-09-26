@@ -40,13 +40,13 @@
   
   - name:  the defuat values for list
     vars: 
-       course:
-         - java
-         - devops
-         - python
-         - aws
+      courses:
+       - java
+       - devops
+       - python
+       - aws
     debug:
-      msg: "{{item.course}},  and has ::{{item.status | default ('AI')}}" 
+      msg: "{{item.courses}},  and has ::{{item.status | default ('AI')}}" 
     
 
 
