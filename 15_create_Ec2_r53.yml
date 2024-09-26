@@ -21,4 +21,6 @@
     loop: "{{instances}}"
     register: ec2_instances
 
-  
+  - name: The reslts
+    debug:
+      msg: "The reslts are {{ec2_instances}}"   
