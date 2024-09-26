@@ -46,7 +46,7 @@
        - python
        - aws
     debug:
-      msg: "{{item.courses}},  and has ::{{item.status | default ('AI')}}" 
+      msg: "{{item.courses}}" 
     
 
 
