@@ -46,7 +46,7 @@
          C: "python"
     debug:
       msg: "{{item)}}"
-    loop: "{{courses}}"    
+    loop: "{{courses | dict2items}}"    
 
 
       
