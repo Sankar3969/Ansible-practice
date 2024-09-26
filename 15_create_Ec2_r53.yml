@@ -34,5 +34,6 @@
        ttl: 1
        value: "{{item.instances[0].private_ip_address}}"
        wait: true
+       overwrite: True
     loop: "{{instances}}"
-    overwrite: True
+    
