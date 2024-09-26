@@ -45,7 +45,7 @@
          B: devops
          C: python
     debug:
-      msg: "{{item)}}"
+      msg: "{{item}}"
     loop: "{{courses | dict2items}}"    
 
 
