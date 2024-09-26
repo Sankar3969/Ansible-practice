@@ -35,7 +35,8 @@
   - name: deafault varible assignment
     vars:
       variable2: defalt('admin')
-    loop: "{{ variable2 }}"
+    debug:
+      msg: "The variable 2 is: {{variable2}} "
     
 
 
