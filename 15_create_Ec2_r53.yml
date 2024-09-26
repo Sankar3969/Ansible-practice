@@ -3,7 +3,7 @@
   connection: local
   vars:
     subnet_id: subnet-053e9fc2e2cae9a0a
-    sg-id: "sg-041ee0572bd9bc6ca"
+    sg_id: "sg-041ee0572bd9bc6ca"
     ami_id: "ami-09c813fb71547fc4f"
     zone: "sankardevops.shop"
     instances: 
