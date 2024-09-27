@@ -21,8 +21,9 @@
       login_user: "root"
       login_password: "{{login_password}}"
       login_host: "{{login_host}}"
-      register: login_info
+      register: mysql_info
+      
 
   - name: The mysql login info 
     debug:
-      msg: " The login info :: {{login_info}} "
+      msg: " The login info :: {{mysql_info}} "
