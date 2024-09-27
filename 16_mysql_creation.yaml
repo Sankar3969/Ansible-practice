@@ -21,7 +21,7 @@
       login_user: "root"
       login_password: "{{login_password}}"
       login_host: "{{login_host}}"
-      register: mysql_info
+    register: mysql_info
       
 
   - name: The mysql login info 
