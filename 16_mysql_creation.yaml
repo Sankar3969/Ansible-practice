@@ -5,6 +5,11 @@
     login_password: "ExpenseApp@1"
     login_host: "mysql.sankardevops.shop"
   tasks:
+  - name: PyMySQL installation
+    ansible.builtin.pip:
+      name:
+        - PyMySQL
+      executable: pip3.9  
   - name: mysql server installation
     ansible.builtin.package:
       name: mysql-server
