@@ -11,6 +11,12 @@
       - backend
       - frontend
   tasks:
+  -name: The installation of boto 3 and botocore
+    ansible.builtin.pip:
+      name:
+        - boto3
+        - botocore
+
   - name: The private instances creation
     amazon.aws.ec2_instance:
       name: "{{item}}"
