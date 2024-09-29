@@ -27,8 +27,8 @@
       login_password: "{{login_password}}"
       login_host: "{{login_host}}"
     register: mysql_info
+    ignore_errors: True
       
-
   - name: The mysql login info 
     debug:
       msg: " The login info :: {{mysql_info}} "
