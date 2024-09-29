@@ -32,3 +32,8 @@
   - name: The mysql login info 
     debug:
       msg: " The login info :: {{mysql_info}} "
+  
+  - name: The mysql user and password setting
+    ansible.builtin.command: "mysql_secure_information --set-root-pass {{ login_password }}"
+    when: mysql_info.failed is True
+
