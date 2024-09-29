@@ -1,7 +1,17 @@
 - name: backed server configaration
   host: backend
   become: yes
+  vars:
+    login_password: "ExpenseApp@1"
+    mysql_zone: "mysql.sankardevops.shop"
   tasks: 
+    - name: mandatory installments PyMysql and crptgraphy
+      ansible.builtin.pip:
+        name: 
+         - PyMySQL
+         - cryptography
+         executable: pip3.9
+
     - name: disabling the nodejs
       ansible.builtin.command: dnf module disable nodejs -y
 
@@ -21,6 +31,7 @@
       ansible.builtin.file:
         path: /app
         state: directory   
+
     - name: download files
       ansible.builtin.get_url:
         url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
@@ -31,14 +42,22 @@
         src: /tmp/backend.zip
         dest: /app   
         remote_src: yes
+
     - name: install the npm dependencies
       ansible.builtin.command: npm install
         args:
           chdir: /app      
+
     - name: move backend service to the destination 
       ansible.builtin.copy:        
         src: backed.service
         dest: /etc/systemd/system/backed.service
+    
+    - name: Restart service backend, in all cases
+      ansible.builtin.service:
+      name: backend
+      state: restarted  
+      enabled: true  
 
     - name: install the mysql 
       ansible.builtin.package:
@@ -46,5 +65,18 @@
         state: present
     
     - name: connect to mysql to run the backend sql file
-      ansible.builtin.command:        
+      community.mysql.mysql_db:
+        login_user: root
+        login_password: {{ login_password }} 
+        login_host: {{ mysql_zone }}
+        target: /app/schema/backend.sql
+        name: all
+        state: import
+
+    - name: daemon reload for backend
+      ansible.builtin.systemd_service:
+      state: restarted
+      daemon_reload: true
+      enabled: true  
+
 
