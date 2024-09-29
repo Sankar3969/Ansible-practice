@@ -1,5 +1,5 @@
 - name: Mysql configration
-  hosts: mysql
+  hosts: my sql
   become: yes
   vars:
     login_password: "ExpenseApp@1"
