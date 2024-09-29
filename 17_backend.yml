@@ -67,8 +67,8 @@
     - name: connect to mysql to run the backend sql file
       community.mysql.mysql_db:
         login_user: root
-        login_password: {{ login_password }} 
-        login_host: {{ mysql_zone }}
+        login_password: "{{ login_password }}" 
+        login_host: "{{ mysql_zone }}"
         target: /app/schema/backend.sql
         name: all
         state: import
