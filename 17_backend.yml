@@ -10,7 +10,7 @@
         name: 
          - PyMySQL
          - cryptography
-         executable: pip3.9
+      executable: pip3.9
 
     - name: disabling the nodejs
       ansible.builtin.command: dnf module disable nodejs -y
