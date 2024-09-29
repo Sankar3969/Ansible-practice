@@ -51,7 +51,7 @@
     - name: move backend service to the destination 
       ansible.builtin.copy:        
         src: backed.service
-        dest: /etc/systemd/system/backed.service
+        dest: /etc/systemd/system/backend.service
         remote_src: yes
     
     - name: Restart service backend, in all cases
