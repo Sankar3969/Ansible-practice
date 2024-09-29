@@ -31,7 +31,7 @@
         remote_src: yes   
   
   - name: move backend service to the destination 
-      ansible.builtin.copy:        
+    ansible.builtin.copy:        
         src: expense.conf
         dest: /etc/nginx/default.d/expense.conf 
  
